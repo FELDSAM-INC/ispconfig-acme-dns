@@ -23,10 +23,10 @@ classifiers = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/FELDSAM-INC/ispconfig-rest/tree/main/acme-dns"
-Documentation = "https://github.com/FELDSAM-INC/ispconfig-rest/blob/main/acme-dns/README.md"
-Source = "https://github.com/FELDSAM-INC/ispconfig-rest/tree/main/acme-dns/certbot"
-Issues = "https://github.com/FELDSAM-INC/ispconfig-rest/issues"
+Homepage = "https://github.com/FELDSAM-INC/ispconfig-acme-dns"
+Documentation = "https://github.com/FELDSAM-INC/ispconfig-acme-dns#readme"
+Source = "https://github.com/FELDSAM-INC/ispconfig-acme-dns/tree/main/certbot"
+Issues = "https://github.com/FELDSAM-INC/ispconfig-acme-dns/issues"
 
 [project.entry-points."certbot.plugins"]
 dns-ispconfig-rest = "certbot_dns_ispconfig_rest._internal.dns_ispconfig_rest:Authenticator"

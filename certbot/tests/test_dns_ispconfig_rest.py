@@ -1,4 +1,4 @@
-"""Error paths of the ispconfig-rest client; tests/Integration/acme-dns/run.sh covers issuing certificates."""
+"""Error paths of the ispconfig-rest client; tests/integration/run.sh covers issuing certificates."""
 import unittest
 from unittest import mock
 

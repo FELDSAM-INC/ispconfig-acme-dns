@@ -1,0 +1,27 @@
+name: tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  clients:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Shell syntax
+        run: sh -n certbot-hook/ispconfig-rest-certbot-hook acme.sh/dns_ispconfig_rest.sh
+      - name: certbot plugin unit tests
+        working-directory: certbot
+        run: |
+          pip install --quiet .
+          python -m unittest discover -s tests
+      - name: Certificates from Pebble with all three clients
+        run: bash tests/integration/run.sh

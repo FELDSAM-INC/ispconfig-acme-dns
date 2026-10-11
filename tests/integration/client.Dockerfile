@@ -1,4 +1,4 @@
-# ACME clients for tests/Integration/acme-dns/run.sh: certbot (pip) and acme.sh; the ispconfig-rest plugins are
+# ACME clients for tests/integration/run.sh: certbot (pip) and acme.sh; the ispconfig-rest plugins are
 # installed from the mounted repository at run time.
 FROM python:3.12-slim
 RUN apt-get update -qq && apt-get install -y -qq --no-install-recommends curl git openssl ca-certificates bind9-dnsutils >/dev/null \

@@ -1,4 +1,4 @@
-# Publishes the certbot plugin acme-dns/certbot to PyPI as certbot-dns-ispconfig-rest, through PyPI's trusted
+# Publishes the certbot plugin in certbot/ to PyPI as certbot-dns-ispconfig-rest, through PyPI's trusted
 # publishing (no stored token): push a tag certbot-dns-ispconfig-rest-vX.Y.Z matching its pyproject.toml version.
 name: certbot plugin
 
@@ -18,7 +18,7 @@ jobs:
         with:
           python-version: '3.12'
       - name: Build and check
-        working-directory: acme-dns/certbot
+        working-directory: certbot
         env:
           TAG: ${{ github.ref_name }}
         run: |
@@ -34,7 +34,7 @@ jobs:
       - uses: actions/upload-artifact@v4
         with:
           name: dist
-          path: acme-dns/certbot/dist/
+          path: certbot/dist/
 
   publish:
     needs: build

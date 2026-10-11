@@ -14,7 +14,7 @@ Into the Python environment of a pip-installed certbot, for example one in `/opt
 ```
 
 Certbot from snap or a distribution package cannot load pip plugins; use the
-[hook script](https://github.com/FELDSAM-INC/ispconfig-rest/tree/main/acme-dns/certbot-hook) with those.
+[hook script](https://github.com/FELDSAM-INC/ispconfig-acme-dns/tree/main/certbot-hook) with those.
 
 ## Use
 
@@ -46,7 +46,7 @@ certbot certonly --authenticator dns-ispconfig-rest \
 Renewals keep these settings. ispconfig-rest's certificate must be valid for its name; ISPConfig's Let's Encrypt
 certificate is, ISPConfig's self-signed fallback (no subjectAltName) is refused.
 
-See the [full guide](https://github.com/FELDSAM-INC/ispconfig-rest/blob/main/acme-dns/README.md), which also covers
+See the [full guide](https://github.com/FELDSAM-INC/ispconfig-acme-dns#readme), which also covers
 acme.sh.
 
 ## License

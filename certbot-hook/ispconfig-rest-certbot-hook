@@ -12,7 +12,7 @@
 #   ISPC_REST_CA_BUNDLE    CA file to trust for ispconfig-rest (optional)
 #   ISPC_REST_TIMEOUT      seconds to wait until ISPConfig has applied the record (default 300)
 #   ISPC_REST_PROPAGATION  seconds to wait after that for secondary DNS servers (default 30)
-# certbot provides CERTBOT_DOMAIN and CERTBOT_VALIDATION. See acme-dns/README.md.
+# certbot provides CERTBOT_DOMAIN and CERTBOT_VALIDATION. See github.com/FELDSAM-INC/ispconfig-acme-dns.
 set -eu
 
 action=${1:-}

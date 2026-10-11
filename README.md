@@ -1,8 +1,9 @@
-# DNS challenges with certbot and acme.sh
+# DNS challenges with certbot and acme.sh for ISPConfig
 
 Servers outside ISPConfig, such as VPS servers, can obtain Let's Encrypt certificates for domains whose DNS zones are
-hosted in ISPConfig. They answer the DNS-01 challenge through ispconfig-rest, so wildcard certificates and servers
-without a public web server work too. Needs ispconfig-rest 1.0.7 or newer.
+hosted in ISPConfig. They answer the DNS-01 challenge through
+[ispconfig-rest](https://github.com/FELDSAM-INC/ispconfig-rest) 1.0.7 or newer, so wildcard certificates and servers
+without a public web server work too.
 
 | Client | What to install |
 | --- | --- |
@@ -110,13 +111,17 @@ DELETE /api/v1/dns/acme-challenges?name=_acme-challenge.www.example.com&value=<t
 
 The records get TTL 60. Publishing the same name and value again returns the existing record. A zone holds at most
 100 challenge records at a time. `DELETE /api/v1/dns/acme-challenges/{id}` removes one record by id. Other DNS records
-are invisible to these calls. See the OpenAPI description at `/api/documentation`.
+are invisible to these calls. See the OpenAPI description at `/api/documentation` of your ispconfig-rest installation.
 
 ## Tests
 
 ```sh
-bash tests/Integration/acme-dns/run.sh   # the three clients against Pebble with a stand-in API (Docker)
+bash tests/integration/run.sh   # the three clients against Pebble with a stand-in API (Docker)
 ```
 
-The Ansible end-to-end test (`tests/Integration/ansible/run.sh`) also obtains certificates with all three clients
-from a real ISPConfig DNS server through ispconfig-rest.
+The end-to-end test of [ispconfig-ansible](https://github.com/FELDSAM-INC/ispconfig-ansible) also obtains certificates
+with all three clients from a real ISPConfig DNS server through ispconfig-rest.
+
+## License
+
+BSD-3-Clause

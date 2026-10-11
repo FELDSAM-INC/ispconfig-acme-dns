@@ -2,8 +2,8 @@
 # shellcheck disable=SC2034
 dns_ispconfig_rest_info='ISPConfig REST API (ispconfig-rest)
  DNS-01 challenges in zones hosted in ISPConfig, through ispconfig-rest 1.0.7 or newer.
-Site: github.com/FELDSAM-INC/ispconfig-rest
-Docs: github.com/FELDSAM-INC/ispconfig-rest/blob/main/acme-dns/README.md
+Site: github.com/FELDSAM-INC/ispconfig-acme-dns
+Docs: github.com/FELDSAM-INC/ispconfig-acme-dns#readme
 Options:
  ISPC_REST_URL Address of ispconfig-rest, e.g. https://panel.example.com:8090
  ISPC_REST_KEY API key; create one limited to challenges: ispconfig-rest key:create NAME --acme
