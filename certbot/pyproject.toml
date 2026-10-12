@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "certbot-dns-ispconfig-rest"
-version = "1.0.0"
+version = "1.0.1"
 description = "Certbot DNS authenticator for zones hosted in ISPConfig, through ispconfig-rest"
 readme = "README.md"
 license = "BSD-3-Clause"
